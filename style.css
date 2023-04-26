@@ -38,7 +38,9 @@ body{
     justify-content: center;
     align-items: center;
 }  
-
+.stats-card{
+    display: flex;
+}
 .stats-content{
     padding: 5.85em 7em 5.85em 5.85em;
     width: 570px;
@@ -54,8 +56,8 @@ body{
 
 .stats-content__paragraph p{
     line-height: 1.5em;
-    margin-top: 30px ;
-    margin-right: 32px;
+    margin-top: 1.875em ;
+    margin-right: 2em;
     font-weight: 400;
     font-size: 0.9rem;
     color: var(--slightly-transparent-whit);
@@ -65,7 +67,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 70px 25PX 0 0;
+    margin: 4.375em 1.5625em 0 0;
     /* column-gap: 80px; */
 }
 
@@ -77,14 +79,16 @@ body{
     line-height: 1.9em;
     text-transform: uppercase;
 }
-
+/* estableces el ancho máximo de la imagen en el 100% del contenedor y la altura se ajusta automáticamente para mantener la relación de aspecto de la imagen. Con esto, 
+la imagen se ajustará al ancho de 570px si el contenedor lo permite, pero se adaptará a tamaños más pequeños si es necesario, sin deformarse. */
 .stats-image{
-  min-height: 10em;
-  width: 570px;
-  min-width: 300px;
-  background: url(images/image-header-desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 0 10px 10px 0;
-  overflow: hidden;
-}
+    width: 570px;
+    min-width: 300px;
+    max-width: 100%;
+    height: auto;
+    background: url(images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+    }
